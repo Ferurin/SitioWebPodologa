@@ -1,30 +1,22 @@
 <?php
-
-if (isset($_SESSION['correo'])) {
-    // Si el usuario ha iniciado sesión, muestra el botón
-    echo '<button>Cerrar sesión</button>';
-} else {
-    // mostrar un mensaje de inicio de sesión aquí
+include("../validate.php");
+if (!isset($_SESSION["nombre"])) {
+    header("location: ../login.php");
+    exit;
 }
 ?>
 <!doctype html>
 <html lang="es">
 
 <head>
-    <title>Reserva de horas</title>
+    <title>Reserva de cita</title>
     <link rel="icon" type="image/png" href="../img/logo.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="../../image/png" href="img/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/appointment.css">
-    <?php
-    include("../validate.php");
-    if (!isset($_SESSION["nombre"])) {
-        header("location: ../login.php");
-        exit;
-    }
-    ?>
 </head>
 
 <body>
@@ -41,10 +33,10 @@ if (isset($_SESSION['correo'])) {
                             <a class="nav-link" href="../../index.php">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Reserva de Horas</a>
+                            <a class="nav-link" href="administrar_cita.php">Registro de horas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../login.php">Inicio de sesión</a>
+                            <a class="nav-link" href="../log_out.php">Cerrar sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -103,7 +95,7 @@ if (isset($_SESSION['correo'])) {
                         </div>
                     </div>
                     <div>
-                        <input type="submit" class="formbold-btn" value="Agendar cita" style="margin-top:30px">
+                        <input type="submit" class="formbold-btn" value="Agendar cita">
                     </div>
                 </form>
             </div>
@@ -113,25 +105,22 @@ if (isset($_SESSION['correo'])) {
     <footer class="footer">
         <div class="copy">2023</div>
         <div class="bottom-links">
-          <div class="links">
-            <span>Contacto</span>
-            <a href="https://web.whatsapp.com/">+56 9 8153 9650</a>
-            <a href="#">Instagram</a>
-          </div>
-          <div class="links">
-            <span>Social Links</span>
-            <a href="https://www.facebook.com/login/?locale=es_LA"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-          </div>
+            <div class="links">
+                <span>Contacto</span>
+                <a href="https://web.whatsapp.com/">+56 9 8153 9650</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="links">
+                <span>Social Links</span>
+                <a href="https://www.facebook.com/login/?locale=es_LA"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-      </footer>
-    <!-- Bootstrap JavaScript Libraries -->
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
-    <script src="../js/main.js"></script>
 </body>
 
 </html>
