@@ -5,22 +5,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-@media (max-width: 768px) {
-    .logInLogo {
-        width: 80px;
-        height: 80px;
-    }
-}
-
 .formbold-mb-5 {
     margin-bottom: 20px;
 }
-
 .formbold-pt-3 {
     padding-top: 12px;
 }
-
 .formbold-main-wrapper {
     display: flex;
     align-items: center;
@@ -29,26 +19,23 @@
 }
 
 .formbold-form-wrapper {
-    margin-top: 50px;
+    margin-top: 10px;
     max-width: 500px;
     width: 100%;
     background: rgb(255, 255, 255);
 }
-
 .formbold-form-label {
     display: block;
     font-weight: 500;
     font-size: 16px;
-    color: #07074d;
-    margin-bottom: 12px;
+    color: rgb(49, 56, 102);
+    margin-bottom: 5px;
 }
-
 .formbold-form-label-2 {
     font-weight: 600;
     font-size: 20px;
     margin-bottom: 20px;
 }
-
 .formbold-form-input {
     width: 100%;
     padding: 12px 24px;
@@ -61,12 +48,10 @@
     outline: none;
     resize: none;
 }
-
 .formbold-form-input:focus {
     border-color: #6a64f1;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
 }
-
 .formbold-btn {
     text-align: center;
     font-size: 16px;
@@ -79,45 +64,31 @@
     width: 100%;
     cursor: pointer;
 }
-
 .formbold-btn:hover {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
 }
-
 .formbold--mx-3 {
     margin-left: -12px;
     margin-right: -12px;
 }
-
 .formbold-px-3 {
     padding-left: 12px;
     padding-right: 12px;
 }
-
 .flex {
     display: flex;
 }
-
 .flex-wrap {
     flex-wrap: wrap;
 }
-
 .w-full {
     width: 100%;
 }
-
 @media (min-width: 540px) {
     .sm\:w-half {
         width: 50%;
     }
 }
-
-/*.comment 
-{
-    :-moz-placeholder {
-        font-size: 3px;
-    }
-}*/
 .footer {
     position: fixed;
     bottom: 0;
@@ -127,25 +98,21 @@
     text-align: center;
     background-color: #302f49;
 }
-
 .footer .copy {
     font-weight: bold;
     color: #fff;
     margin-bottom: 10px;
 }
-
 .footer .bottom-links {
     display: flex;
     justify-content: center;
 }
-
 .bottom-links {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 40px 0;
 }
-
 .bottom-links .links {
     display: flex;
     flex-direction: column;
@@ -153,16 +120,17 @@
     align-items: center;
     padding: 0 40px;
 }
-
 .bottom-links .links span {
     font-size: 20px;
     color: #fff;
     text-transform: uppercase;
     margin: 10px 0;
 }
-
 .bottom-links .links a {
     text-decoration: none;
     color: #a1a1a1;
     padding: 10px 20px;
+}
+.navbar-nav {
+    margin-left: 1000px;
 }
