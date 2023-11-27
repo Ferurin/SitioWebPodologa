@@ -205,3 +205,6 @@
   max-width: 1000px;
   
 }
+.nav-item {
+  margin-left: auto;
+}
